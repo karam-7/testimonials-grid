@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+*{
+    box-sizing: border-box;
+    line-height: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-width: 1340px;
+    background-color: hsl(210, 46%, 95%); 
+}
+
+/* ======================== Star Main Area ================ */
+
+.site{
+    text-align: start;
+    padding: 2rem 4rem;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "dan dan jon ki"
+                         "jea pat pat ki";
+    gap: 2rem;    
+                    
+}
+
+.site-section{
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.person{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+.name{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 0.5rem;
+}
+
+.person-img{
+    border-radius: 100%;
+    border: 1px solid hsl(210, 46%, 95%);
+}
+
+.name-span{
+    color: hsl(210, 46%, 95%);
+    font-size: 1rem;
+    font-family: 'Barlow Semi Condensed';
+    font-weight: 600;
+}
+
+.name-small{
+    color: hsl(210, 46%, 95%);
+    opacity: 50%;
+    font-size: 1rem;
+    font-family: 'Barlow Semi Condensed';
+    font-weight: 500;
+}
+
+.section-h1{
+    margin-top: 1rem;
+    color: hsl(210, 46%, 95%);
+    font-size: 1.4rem;
+    font-family: 'Barlow Semi Condensed';
+    font-weight: 600;
+    line-height: 1.5rem;
+}
+
+.section-para{
+    margin-top: 1rem;
+    color: hsl(210, 46%, 95%);
+    opacity: 70%;
+    font-size: 0.9rem;
+    font-family: 'Barlow Semi Condensed';
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+
+/* ================== START Daniel Section Area ================== */
+#dan{
+    grid-area: dan;
+    background-color: hsl(263, 55%, 52%);
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position-x: 80%;
+}
+/* ================== End Daniel Section Area ================== */
+/* ================== START Jonathan Section Area ================== */
+#jon{
+    grid-area: jon;
+    background-color: hsl(217, 19%, 35%);
+}
+/* ================== End Jonathan Section Area ================== */
+/* ================== START Jeanette Section Area ================== */
+#jea{
+    grid-area: jea;
+    background-color: hsl(0, 0%, 100%);
+}
+
+#jea .name-small, #jea .name-span{
+    color: hsl(219, 29%, 14%);
+}
+
+#jea .section-h1, #jea .section-para{
+    color: hsl(219, 29%, 14%);
+}
+
+
+/* ================== End Jeanette Section Area ================== */
+/* ================== START Patrick Section Area ================== */
+#pat{
+    grid-area: pat;
+    background-color: hsl(219, 29%, 14%);
+
+}
+/* ================== End Patrick Section Area ================== */
+/* ================== START Kira Section Area ================== */
+#ki{
+    grid-area: ki;
+    background-color: hsl(0, 0%, 100%);
+}
+
+#ki .name-small, #ki .name-span{
+    color: hsl(219, 29%, 14%);
+}
+
+#ki .section-h1, #ki .section-para{
+    color: hsl(219, 29%, 14%);
+}
+/* ================== End Kira Section Area ================== */
+
+
+/* ======================== End Main Area ================ */
+
+/* ======================== START Footer Area ================ */
+
+.foot {
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 20px;
+    color: hsl(35, 77%, 62%);
+    justify-content: center;
+    background-color: hsl(240, 10%, 16%);
+    padding: 5px;
+  }
+  
+.foot a {
+    color: hsl(5, 85%, 63%);
+    text-decoration: none;
+}
+
+.foot a:hover{
+    color: white;
+}
+  
+  
+  /* ======================== End Footer Area ================ */
+  
+  /* ======================== Start Media Querry Area ================ */
+
+@media screen and (max-width: 375px){
+    body{
+        min-width: 375px;
+    }
+
+    .site{
+        padding: 1rem;
+        margin-top: 0.5rem;
+        grid-template-columns: 1fr;
+        grid-template-areas: "dan"
+        "jon"
+        "jea"
+        "pat"
+        "ki";
+    }
+
+    #dan{
+        background-position-x: 90%;
+    }
+
+    .section-h1{
+        font-size: 1.41rem;
+    }
+
+    .section-para{
+        font-size: 0.97rem;
+    }
+}
